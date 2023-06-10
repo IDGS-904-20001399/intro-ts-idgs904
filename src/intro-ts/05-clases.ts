@@ -1,0 +1,46 @@
+class Persona{
+    nombre:string = '2';
+    edad:number = 2;
+    constructor(nombre:string, edad:number){
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    imprimir(){
+        console.log(`Nombre: ${this.nombre} y edad ${this.edad}`);
+        
+    }
+}
+
+let persona:Persona;
+persona = new Persona("Roberto", 21);
+persona.imprimir();
+
+class Dado{
+    private valor:number = 0;
+    public tirar(){
+        this.generar();
+    }
+    private generar(){
+        this.valor = Math.floor(Math.random() * 6) + 1;
+    }
+
+    public imprimir(){
+        console.log(`Valor: ${this.valor}`);
+    }
+}
+
+let dado1 = new Dado();
+dado1.tirar();
+dado1.imprimir();
+
+class Persona3{
+    constructor(public nombre:string, public edad:number){}
+    imprimir(){
+        console.log(`Nombre: ${this.nombre} y edad ${this.edad}`);
+    }
+}
+
+let persona3:Persona3;
+persona3 = new Persona3('Roberto', 12);
+persona3.imprimir();
